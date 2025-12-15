@@ -1,5 +1,6 @@
 # 🍳 RecipeApp
 <img width="591" height="1280" alt="image" src="https://github.com/user-attachments/assets/bc86b8e0-9c5c-4b29-a72c-0fe49ccb756c" />
+![photo_2025-12-15_23-16-42](https://github.com/user-attachments/assets/496a4d20-bd8a-45df-9e74-3585f778e72f)
 
 
 A beautiful, feature-rich recipe application built with React Native and Expo. Discover delicious meals from around the world, save your favorites, and create your own personal cookbook.
