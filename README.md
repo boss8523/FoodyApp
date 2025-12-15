@@ -1,50 +1,140 @@
-# Welcome to your Expo app 👋
+# 🍳 RecipeApp
+<img width="591" height="1280" alt="image" src="https://github.com/user-attachments/assets/bc86b8e0-9c5c-4b29-a72c-0fe49ccb756c" />
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+A beautiful, feature-rich recipe application built with React Native and Expo. Discover delicious meals from around the world, save your favorites, and create your own personal cookbook.
 
-1. Install dependencies
 
+
+## ✨ Features
+
+### 🔍 Discover Recipes
+- Browse recipes by categories (Beef, Chicken, Dessert, Seafood, Vegetarian, and more)
+- Search for specific recipes by name
+- View detailed recipe information including ingredients and step-by-step instructions
+- Beautiful masonry grid layout for recipe browsing
+
+### ❤️ Favorites
+- Save your favorite recipes with one tap
+- Quick access to all saved recipes
+- Persistent storage - your favorites are saved locally
+
+### 👨‍🍳 My Food - Personal Cookbook
+- Create and publish your own recipes
+- Upload photos of your dishes (camera or gallery)
+- Add custom ingredients with measurements
+- Write step-by-step cooking instructions
+- Set preparation time, servings, and difficulty level
+
+### 🎥 Video Tutorials
+- Watch YouTube cooking tutorials directly in the app
+- Fullscreen video player with controls
+
+### 🎨 Beautiful UI/UX
+- Modern, clean interface with smooth animations
+- Responsive design for all screen sizes
+- Platform-specific styling (iOS & Android)
+
+## 🛠️ Tech Stack
+
+- **React Native** - Cross-platform mobile framework
+- **Expo** - Development platform
+- **TypeScript** - Type-safe JavaScript
+- **React Navigation** - Screen navigation
+- **React Native Reanimated** - Animations
+- **AsyncStorage** - Local data persistence
+- **Axios** - API requests
+- **TheMealDB API** - Recipe data source
+
+## 📦 Installation
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+- Expo CLI
+
+### Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/recipe-app.git
+   cd recipe-app
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Install Expo dependencies**
+   ```bash
+   npx expo install expo-linear-gradient expo-image-picker @react-native-async-storage/async-storage react-native-reanimated react-native-youtube-iframe react-native-webview react-native-responsive-screen
+   ```
 
+4. **Configure Reanimated** - Add to `babel.config.js`:
+   ```javascript
+   module.exports = function(api) {
+     api.cache(true);
+     return {
+       presets: ['babel-preset-expo'],
+       plugins: ['react-native-reanimated/plugin'],
+     };
+   };
+   ```
+
+5. **Start the app**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+6. **Run on device**
+   - Press `i` for iOS simulator
+   - Press `a` for Android emulator
+   - Scan QR code with Expo Go app
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📁 Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+recipe-app/
+├── assets/images/
+├── components/
+│   ├── Categories.tsx
+│   ├── Recipes.tsx
+│   └── Loading.tsx
+├── screens/
+│   ├── HomeScreen.tsx
+│   ├── RecipeScreen.tsx
+│   ├── FavoritesScreen.tsx
+│   ├── MyFoodScreen.tsx
+│   └── AddRecipeScreen.tsx
+├── constants/
+├── navigation/
+├── App.tsx
+└── package.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔗 API
 
-## Learn more
+Uses [TheMealDB API](https://www.themealdb.com/api.php) for recipe data.
 
-To learn more about developing your project with Expo, look at the following resources:
+| Endpoint | Description |
+|----------|-------------|
+| `/categories.php` | List all categories |
+| `/filter.php?c={category}` | Filter by category |
+| `/lookup.php?i={id}` | Get meal details |
+| `/search.php?s={name}` | Search meals |
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📄 License
 
-## Join the community
+This project is open source and available under the [MIT License](LICENSE).
 
-Join our community of developers creating universal apps.
+## 🙏 Acknowledgments
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [TheMealDB](https://www.themealdb.com/) - Recipe API
+- [Expo](https://expo.dev/) - Development platform
+- Original project creators and contributors
+
+---
+
+⭐ If you found this project helpful, please give it a star!
