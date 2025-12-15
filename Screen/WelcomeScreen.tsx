@@ -67,7 +67,7 @@ export default function WelcomeScreen() {
                     alignItems:'center'
                 }}>
                     <Image 
-                        source={require('@/assets/images/LOGO.jpg')} 
+                        source={require('../assets/images/LOGO.jpg')} 
                         style={styles.Logo} 
                     />
                 </Animated.View>
